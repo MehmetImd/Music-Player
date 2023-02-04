@@ -1,0 +1,142 @@
+/*
+    font-family: 'Roboto', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.music-player-box {
+    width: 40%;
+    height: 45vh;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 2px;
+    box-shadow: 0 0px 35px rgba(0, 0, 0, 0.252);
+    backdrop-filter: blur(9.5px);
+    position: relative;
+    top: 20vh;
+    left: 30%;
+}
+
+.music-player-box .circle-foto {
+    height: 214px;
+    width: 214px;
+    background: url(b.jpg) no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.393);
+    border-radius: 50% 50%;
+    box-shadow: -20px -15px 30px rgba(0, 0, 0, 0.051);
+    position: absolute;
+    right: 82.5%;
+    top: 7vh;
+    animation: fotod infinite linear 10s;
+}
+@keyframes fotod {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.music-text-box {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    line-height: 22px;
+    position: relative;
+    top: 17.5vh;
+}
+.music-text-box .music-name h2{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: rgba(213, 213, 213, 0.814);
+    text-shadow: 0 0 20px rgba(214, 214, 214, 0.251);
+}
+.music-text-box .name-text h4{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.429);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.111);
+}
+
+
+.video-settings {
+    position: relative;
+    top:24vh;
+}
+.video-settings .footer-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-settings .footer-bar .icon{
+    margin: 0px 16px;
+    font-size: 20px;
+}
+.video-settings .footer-bar a{
+    color: rgb(56, 56, 56);
+}
+
+.loop a:hover,.random a:hover{
+    color: rgb(255, 72, 252);
+    transition: 0.2s ease-in-out;
+    text-shadow: 0 0 50px rgb(128, 128, 128);
+}
+.loop:hover{
+    animation: animate infinite ease-in-out 1.5s;  
+}
+@keyframes animate {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.left-play a:hover,.right-play a:hover{
+    color: rgb(87, 210, 255);
+    transition: 0.2s ease-in-out;
+    text-shadow: 0 0 50px rgb(102, 102, 102);
+}
+
+.play-stop a,.play-stop i{
+    font-size: 35px;
+    color: rgb(204, 204, 204);
+}
+.play-stop a i:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 50px rgba(102, 102, 102, 0.288);
+}
+
+.music-player-box .lenght::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 80%;
+    background-color: black;
+    top: 38vh;
+    left: 10%;
+}
